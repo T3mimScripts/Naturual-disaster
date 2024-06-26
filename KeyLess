@@ -1,0 +1,180 @@
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+local Window = Library.CreateLib("Natural Disaster script", "Midnight")
+
+local Tab = Window:NewTab("Home/Info")
+
+local Section = Tab:NewSection("Home/Info")
+
+Section:NewLabel("Welcome fellow exploiter, thank you for using my script.")
+
+Section:NewLabel("This script is PC/MOBILE supported.")
+
+local Section = Tab:NewSection("if ur using mobile, use this mobile keyboard script")
+
+Section:NewButton("Mobile keyboard", "Helps u bind this script while on mobile", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+local Section = Tab:NewSection("Some admins scripts")
+
+Section:NewButton("Infinite Yield", "Executes Inf yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+Section:NewButton("NameLess Admin", "Executes NameLess Admin", function()
+    
+loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+
+end)
+
+
+local Section = Tab:NewSection("SUPPORTED pc executors")
+
+Section:NewLabel("✔️Solora")
+
+Section:NewLabel("✔️Invisible")
+
+Section:NewLabel("✔️Lunar")
+
+Section:NewLabel("✔️Incognito")
+
+Section:NewLabel("✔️Incognito V2")
+
+Section:NewLabel("✔️Feather")
+
+
+local Section = Tab:NewSection("Mobile Executors")
+
+Section:NewLabel("✔️Arcues X")
+
+Section:NewLabel("✔️Delta")
+
+Section:NewLabel("✔️Vega x")
+
+Section:NewLabel("✔️Codex")
+
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Player")
+
+Section:NewTextBox("WalkSpeed", "WS", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+
+Section:NewTextBox("JumpPower", "JP", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+end)
+
+Section:NewButton("Infinite zoom", "you can zoom out of everywhere!", function()
+    game.Players.LocalPlayer.CameraMaxZoomDistance = 999999
+end)
+
+Section:NewButton("Inf jump", "jump in da sky forever!!", function()
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")       
+    end)
+end)
+
+Section:NewSlider("Fov", "Adjust ur fov", 121, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Workspace.CurrentCamera.FieldOfView = s
+end)
+
+
+Section:NewButton("Fps booster", "boosts ur fps for smoother gameplay!", function()
+    -- Made by RIP#6666
+_G.Settings = {
+    Players = {
+        ["Ignore Me"] = true, -- Ignore your Character
+        ["Ignore Others"] = true -- Ignore other Characters
+    },
+    Meshes = {
+        Destroy = false, -- Destroy Meshes
+        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+    },
+    Images = {
+        Invisible = true, -- Invisible Images
+        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+        Destroy = false, -- Destroy Images
+    },
+    ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+    ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+    ["No Explosions"] = true, -- Makes Explosion's invisible
+    ["No Clothes"] = true, -- Removes Clothing from the game
+    ["Low Water Graphics"] = true, -- Removes Water Quality
+    ["No Shadows"] = true, -- Remove Shadows
+    ["Low Rendering"] = true, -- Lower Rendering
+    ["Low Quality Parts"] = true -- Lower quality parts
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+end)
+
+
+
+local Tab = Window:NewTab("Teleports")
+
+local Section = Tab:NewSection("Teleports")
+
+Section:NewButton("Lobby", "Teleports you to lobby", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-283.042786, 180.889511, 343.285126, 0.627525747, -0.0304363556, -0.778000653, 2.8044451e-07, 0.99923569, -0.0390911214, 0.778595805, 0.0245304685, 0.627046049)
+end)
+
+Section:NewButton("LeaderBoard", "Teleports you to the leaderboard", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-307.756104, 195.794327, 389.100281, -0.842994034, 0.0239811093, 0.537388146, -9.69157554e-09, 0.999005795, -0.0445809476, -0.537922919, -0.037581481, -0.842155933)
+end)
+
+Section:NewButton("Map", "Teleports you to the map", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.4734421, 48.7875023, 28.2498074, -0.0346142501, -0.0439572111, -0.99843359, 3.47354217e-07, 0.999032199, -0.0439835861, 0.999400735, -0.00152283115, -0.0345807336)
+end)
+
+local Tab = Window:NewTab("Fun Stuff")
+local Section = Tab:NewSection("Fun things")
+
+
+Section:NewButton("FE invisible tool (R6 ONLY)", "invisible tool (R6 ONLY)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()
+end)
+
+Section:NewButton("Kick you're self", "Kick urself", function()
+    game.Players.LocalPlayer:Kick("NATURAL DISASTER SURVIVAL SCRIPT")
+end)
+
+Section:NewTextBox("Print stuff", "After enetering the word u printed check console", function(txt)
+	print(txt)
+end)
+
+Section:NewButton("BTOOLS", "not FE.", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+end)
+
+
+
+local Tab = Window:NewTab("Credits and others")
+
+local Section = Tab:NewSection("Credits and others")
+
+Section:NewLabel("My YT")
+
+Section:NewButton("My yt", "Click to copy my yt (plz sub)", function()
+    setclipboard("T3mim scripts")
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Copyed to the your ClipBoard";
+        Text  = "Go past the link to a browser";
+        Icon  = "rbxthumb://type=Asset&id=7600505808&w=150&h=150"})
+    Duration = 10;
+end)
+
+Section:NewKeybind("Hide / UnHide script", "Hides / UnHides the script.", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Executed natural disaster script";
+    Text  = "BY T3MIM_SCRIPTS";
+    Icon  = "rbxthumb://type=Asset&id=7600505808&w=150&h=150"})
+Duration = 10;
